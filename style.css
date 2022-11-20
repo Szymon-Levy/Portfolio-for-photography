@@ -216,6 +216,7 @@ main .right-col .main-text .light-text {
 main .right-col .slides-wrapper {
     margin-top: 30px;
     padding-left: var(--padding);
+    padding-bottom: 30px;
 }
 
 main .right-col .slides-wrapper .heading {
@@ -230,10 +231,6 @@ main .right-col .slides-wrapper .heading h4{
     color: var(--white);
     font-family: var(--josefin);
     font-size: 20px;
-}
-
-main .right-col .slides-wrapper{
-    padding-bottom: 30px;
 }
 
 main .right-col .slides-wrapper .heading  a{
@@ -253,6 +250,10 @@ main .right-col .slides-wrapper .heading  a{
 
 .slides-wrapper .slider .slides .slide.hidden{
     display: none;
+}
+
+.slides-wrapper .slider .slides .slide img {
+    border-radius: 10px;
 }
 
 .slider-navigation{
@@ -312,6 +313,29 @@ main .left-col .line-text:after {
 
 /*------------devices------------*/
 
+
+@media(min-width: 768px){
+    .main-image {
+        position: absolute;
+        height: 100%;
+        z-index: -1;
+    }
+    main {
+        position: relative;
+        height: calc(100vh - 80px);
+        min-height: 800px;
+        display: flex;
+    }
+    main .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .slides-wrapper .slider .slides .slide.hidden {
+        display: block;
+    }
+}
+
 @media(min-width: 1200px){
     :root{
         --padding: 100px;
@@ -337,12 +361,13 @@ main .left-col .line-text:after {
     }
     main {
         position: relative;
+        height: calc(100vh - 127px);
         min-height: 800px;
         display: flex;
     }
     main .container{
         padding-top: 0px;
-        display: flex;
+        flex-direction: row;
     }
     main .right-col .main-text .small-heading {
         font-size: 23px;
@@ -375,25 +400,33 @@ main .left-col .line-text:after {
         width: 50%;
     }
     main .left-col{
-        padding-top: 30%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
     main .right-col {
-        padding-top: 10%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .slides-wrapper .slider .slides .slide.hidden{
-        display: block;
+    main .left-col .dot-text {
+        margin-top: 50%;
+    }
+    main .right-col .main-text {
+        margin-top: 16%;
     }
 }
 
 @media(min-width: 1600px){
     main .right-col .main-text .light-text {
-        font-size: 20px;
-        line-height: 38px;
+        font-size: 16px;
+        line-height: 30px;
+        padding-right: 90px;
+    }
+    main .right-col .main-text {
+        margin-top: 6%;
+    }
+    main .left-col .dot-text {
+        margin-top: 42%;
     }
 }
