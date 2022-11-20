@@ -25,6 +25,23 @@ body{
 
 /*-------Global--------*/
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(83, 83, 83);
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main-color);
+}
+
 img{
     width: 100%;
 }
