@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio for photography</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -64,29 +65,34 @@
                         <h4>Latest shots</h4>
                         <a href="#">View all</a>
                     </div>
-                    <div class="slider">
-                        <div class="slides">
-                            <div class="slide">
-                                <img src="images/shot1.jpg" alt="">
-                            </div>
-                            <div class="slide">
-                                <img src="images/shot2.jpg" alt="">
-                            </div>
-                            <div class="slide hidden">
-                                <img src="images/shot3.jpg" alt="">
-                            </div>
+
+                    <div class="swiper">
+
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide"><img src="images/shot1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="images/shot2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="images/shot3.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="images/shot4.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="images/shot5.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="images/shot6.jpg" alt=""></div>
+
                         </div>
-                        <div class="slider-navigation">
-                            <img class="left" src="images/arrow-left.svg" alt="">
-                            <img class="right" src="images/arrow-right.svg" alt="">
+
+                        <div class="swiper-nav">
+                            <div class="swiper-button-prev"><img class="left" src="images/arrow-left.svg" alt=""></div>
+                            <div class="swiper-button-next"><img class="left" src="images/arrow-right.svg" alt=""></div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </div>
 
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

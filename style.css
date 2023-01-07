@@ -157,7 +157,7 @@ header .logo a{
 header .nav ul li a {
     color: var(--white);
     font-weight: bold;
-    font-size: 23px;
+    font-size: 18px;
     transition: .4s;
 }
 
@@ -234,6 +234,7 @@ main .right-col .slides-wrapper {
     margin-top: 30px;
     padding-left: var(--padding);
     padding-bottom: 30px;
+    overflow: hidden;
 }
 
 main .right-col .slides-wrapper .heading {
@@ -256,32 +257,35 @@ main .right-col .slides-wrapper .heading  a{
     font-size: 14px;
 }
 
-.slides-wrapper .slider .slides {
-    display: flex;
-    gap: 10px;
-}
 
-.slides-wrapper .slider .slides .slide {
-    flex-grow: 1;
-}
-
-.slides-wrapper .slider .slides .slide.hidden{
+/*----------SWIPER------------*/
+.swiper-nav div::after{
     display: none;
 }
 
-.slides-wrapper .slider .slides .slide img {
-    border-radius: 10px;
-}
-
-.slider-navigation{
+.swiper-nav {
     display: flex;
-    gap: 15px;
-    padding-top: 10px;
+    column-gap: 20px;
+    margin-top: 15px;
 }
 
-.slider-navigation img{
-    width: 25px;
+.swiper-nav div {
+    position: static;
+    width: 30px;
+    height: unset;
+    margin-top: unset;
 }
+
+.slides-wrapper .swiper {
+    margin-right: calc(((100% / 2) / 2) * (-1));
+}
+
+.slides-wrapper .swiper .swiper-slide img{
+    border-radius: 7px;
+}
+
+
+
 
 main .left-col {
     padding: 40px var(--padding);
@@ -341,15 +345,11 @@ main .left-col .line-text:after {
         position: relative;
         height: calc(100vh - 80px);
         min-height: 800px;
-        display: flex;
     }
     main .container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-    .slides-wrapper .slider .slides .slide.hidden {
-        display: block;
     }
 }
 
@@ -372,19 +372,22 @@ main .left-col .line-text:after {
     .header-btn {
         margin-right: 0px;
         margin-left: unset;
-        font-size: 23px;
-        padding: 18px 18px;
+        font-size: 19px;
+        padding: 18px 18px 15px;
         border-radius: 4px;
     }
     main {
         position: relative;
         height: calc(100vh - 127px);
         min-height: 800px;
-        display: flex;
     }
     main .container{
         padding-top: 0px;
         flex-direction: row;
+        height: 100%;
+    }
+    main .right-col .slides-wrapper {
+        margin-top: auto;
     }
     main .right-col .main-text .small-heading {
         font-size: 23px;
