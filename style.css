@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:wght@600;800&family=Poppins:wght@400;500&display=swap');
 
+
 :root{
-    --dark-color: #1f2022;
-    --main-color: #00adb5;
+    --dark-color: #030507;
+    --main-color: #8f1313;
     --white: #eeeeee;
     --josefin: 'Josefin Sans', sans-serif;
     --montserrat: 'Montserrat', sans-serif;
@@ -59,6 +60,10 @@ button{
     font-family: var(--josefin);
     cursor: pointer;
     border: 0;
+}
+
+main{
+    overflow: hidden;
 }
 
 
@@ -377,9 +382,7 @@ main .left-col .line-text:after {
         border-radius: 4px;
     }
     main {
-        position: relative;
         height: calc(100vh - 127px);
-        min-height: 800px;
     }
     main .container{
         padding-top: 0px;
